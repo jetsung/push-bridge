@@ -1,0 +1,30 @@
+## PUSH 信息
+
+### GET Test
+GET http://127.0.0.1:8000/api/pushdeer?title=GET 测试&desp=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9
+
+### GET Test [err]
+GET http://127.0.0.1:8000/api/pushdeer?title1=GET 测试&desp=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9
+
+### POST Test
+POST http://127.0.0.1:8000/api/pushdeer
+Content-Type: application/x-www-form-urlencoded
+
+title=【测试表单提交】
+&desp=这个是表单测试的消息通知。
+
+### POST Test [err]
+POST http://127.0.0.1:8000/api/pushdeer
+Content-Type: application/x-www-form-urlencoded
+
+title=【测试表单提交】
+&desp1=这个是表单测试的消息通知。
+
+### POST JSON Test
+POST http://127.0.0.1:8000/api/pushdeer
+Content-Type: application/json
+
+{
+    "title": "JSON 测试",
+    "desp": "这个是 JSON 测试的通知。"
+}
